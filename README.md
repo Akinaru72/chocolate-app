@@ -1,1 +1,1 @@
-# chokolate-app
+# chocolate-app

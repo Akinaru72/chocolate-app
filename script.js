@@ -1,24 +1,23 @@
-const openBtn = document.getElementById("openModalBtn");
-const backdrop = document.getElementById("modalBackdrop");
-const closeBtn = document.querySelector("#closeModalBackdrop");
+// const openBtn = document.getElementById("openModalBtn");
+// const backdrop = document.getElementById("modalBackdrop");
+// const closeBtn = document.querySelector("#closeModalBackdrop");
 
-// const openMobileBtn = document.getElementById("openMobileMenu");
-// const menuMobile = document.getElementById("mobileWindow");
-// const closeMobileBtn = document.querySelector("#closeMobileWindow");
+const openHeaderBtn = document.getElementById("openHeaderBtn");
+const headerMobileWindow = document.getElementById("headerWindow");
+const closeHeaderBtn = document.querySelector("#closeHeaderBtn");
 
-openBtn.addEventListener("click", () => {
-  backdrop.classList.add("is-open");
-});
-
-closeBtn.addEventListener("click", () => {
-  backdrop.classList.remove("is-open");
-});
-
-// openMobileBtn.addEventListener("click", () => {
-//   menuMobile.classList.add("is-open");
-//   console.log(menuMobile);
+// openBtn.addEventListener("click", () => {
+//   backdrop.classList.add("is-open");
 // });
 
-// closeMobileBtn.addEventListener("click", () => {
-//   menuMobile.classList.remove("is-open");
+// closeBtn.addEventListener("click", () => {
+//   backdrop.classList.remove("is-open");
 // });
+
+openHeaderBtn.addEventListener("click", () => {
+  headerMobileWindow.classList.add("is-open");
+});
+
+closeHeaderBtn.addEventListener("click", () => {
+  headerMobileWindow.classList.remove("is-open");
+});

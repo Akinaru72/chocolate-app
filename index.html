@@ -121,7 +121,7 @@
       </section>
 
       <!-- Benefits section -->
-      <!-- <section class="main-benefits">
+      <section class="main-benefits">
         <div class="container">
           <h2 class="visually-hidden">Benefits</h2>
           <ul class="benefits-menu">
@@ -170,10 +170,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Ingredients Section -->
-      <!-- <section class="main-ingredients">
+      <section class="main-ingredients">
         <div class="container">
           <h2 class="main-title-two">
             it all adds up to one exceptional
@@ -187,12 +187,27 @@
           </p>
           <ul class="ingredients-menu">
             <li class="ingredients-item">
-              <img
-                class="ingredients-images"
-                src="./images/milk-chokolate.png"
-                alt="milk-chokolate"
-                width="206"
-              />
+              <picture class="ingredients-picture">
+                <source
+                  srcset="
+                    ./images/desktop/milk-chocolate-desktop.png    1x,
+                    ./images/desktop/milk-chocolate-desktop@2x.png 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="
+                    ./images/milk-chokolate-tab-mob.png    1x,
+                    ./images/milk-chokolate-tab-mob@2x.png 2x
+                  "
+                  media="(max-width: 1167px)"
+                />
+                <img
+                  class="ingredients-image"
+                  src="./images/milk-chokolate-tab-mob.png"
+                  alt="milk-chokolate"
+                />
+              </picture>
               <p class="ingredients-text">milk chocolate</p>
               <div class="overlay">
                 <h3 class="main-title-three">Milk chocolate</h3>
@@ -210,12 +225,27 @@
               </div>
             </li>
             <li class="ingredients-item">
-              <img
-                class="ingredients-images"
-                src="./images/milk.png"
-                alt="milk"
-                width="206"
-              />
+              <picture class="ingredients-images">
+                <source
+                  srcset="
+                    ./images/desktop/milk-desktop.png    1x,
+                    ./images/desktop/milk-desktop@2x.png 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="
+                    ./images/milk-tab-mob.png    1x,
+                    ./images/milk-tab-mob@2x.png 2x
+                  "
+                  media="(max-width: 1167px)"
+                />
+                <img
+                  class="ingredients-image"
+                  src="./images/milk-tab-mob.png"
+                  alt="milk"
+                />
+              </picture>
               <p class="ingredients-text">milk</p>
               <div class="overlay">
                 <h3 class="main-title-three">Milk</h3>
@@ -238,12 +268,27 @@
               </div>
             </li>
             <li class="ingredients-item">
-              <img
-                class="ingredients-images"
-                src="./images/nuts.png"
-                alt="nuts"
-                width="206"
-              />
+              <picture class="ingredients-images">
+                <source
+                  srcset="
+                    ./images/desktop/nuts-desktop.png    1x,
+                    ./images/desktop/nuts-desktop@2x.png 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="
+                    ./images/nuts-tab-mob.png    1x,
+                    ./images/nuts-tab-mob@2x.png 2x
+                  "
+                  media="(max-width: 1167px)"
+                />
+                <img
+                  class="ingredients-image"
+                  src="./images/nuts-tab-mob.png"
+                  alt="nuts"
+                />
+              </picture>
               <p class="ingredients-text">nuts</p>
               <div class="overlay">
                 <h3 class="main-title-three">Nuts</h3>
@@ -266,12 +311,27 @@
               </div>
             </li>
             <li class="ingredients-item">
-              <img
-                class="ingredients-images"
-                src="./images/milk-chokolate.png"
-                alt="semi-sweet-chokolate"
-                width="206"
-              />
+              <picture class="ingredients-images">
+                <source
+                  srcset="
+                    ./images/desktop/semi-sweet-chocolate-desktop.png    1x,
+                    ./images/desktop/semi-sweet-chocolate-desktop@2x.png 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="
+                    ./images/semi-sweet-chocolate-tab-mob.png    1x,
+                    ./images/semi-sweet-chocolate-tab-mob@2x.png 2x
+                  "
+                  media="(max-width: 1167px)"
+                />
+                <img
+                  class="ingredients-image"
+                  src="./images/semi-sweet-chocolate-tab-mob.png"
+                  alt="semi-sweet chokolate"
+                />
+              </picture>
               <p class="ingredients-text">semi - sweet chokolate</p>
               <div class="overlay">
                 <h3 class="main-title-three">semi - sweet chocolate</h3>
@@ -289,27 +349,50 @@
                   chocolate is to compare it to a different type of chocolate.
                   Semisweet is darker than milk chocolate. In a taste
                   comparison, it has a slightly bitter taste whereas milk
-                  chocolate is sweeter and more mellow.
+                  chocolate is sweeter.
                 </p>
               </div>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- How it’s made Section -->
-      <!-- <section id="him" class="main-him">
+      <section id="him" class="main-him">
         <div class="container">
           <h2 class="main-title-two">
             how it’s <span class="orange-span">made?</span>
           </h2>
           <div class="him-image-block">
-            <img
-              class="him-image"
-              src="./images/plate-with-chokolate.jpg"
-              alt="plate-with-chokolate"
-              width="600"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/desktop/hiw-desktop.jpg    1x,
+                  ./images/desktop/hiw-desktop@2x.jpg 2x
+                "
+                media="(min-width: 1168px)"
+              />
+              <source
+                srcset="
+                  ./images/tablet/hiw-tablet.jpg    1x,
+                  ./images/tablet/hiw-tablet@2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/mobile/hiw-mobile.jpg    1x,
+                  ./images/mobile/hiw-mobile@2x.jpg 2x
+                "
+                media="(max-width: 767px)"
+              />
+              <img
+                class="him-image"
+                src="./images/mobile/hiw-mobile.jpg"
+                alt="plate-with-chokolate"
+              />
+            </picture>
+
             <div class="him-block">
               <h3 class="main-title-three">
                 Try our chocolates today and discover the perfect balance of
@@ -350,7 +433,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- Reviews Section -->
       <!-- <section id="reviews" class="main-reviews">

@@ -42,6 +42,19 @@ img {
   display: block;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   max-width: 367px;
   padding-left: 16px;
@@ -196,6 +209,7 @@ img {
   top: 0;
   left: 0;
   background-color: #1e1823;
+  overflow: auto;
   opacity: 0;
   pointer-events: none;
   padding-top: 136px;
@@ -481,34 +495,19 @@ img {
 }
 
 .main-benefits .container {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 34px;
-  padding-right: 34px;
-  margin-bottom: 72px;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 36px;
+  margin-bottom: 30px;
 }
 
 .benefits-menu {
   display: flex;
-  gap: 88px;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .benefits-item {
-  flex-basis: calc((100% - 88px * 2) / 3);
-  position: relative;
+  width: 100%;
 }
 
 .benefits-icon-wrapper {
@@ -522,50 +521,89 @@ img {
   margin-bottom: 22px;
 }
 
-.border::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: -18px;
-  width: 1px;
-  height: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(50%);
-}
-
 .main-title-three {
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 0.01em;
-  line-height: 1.33333;
+  line-height: 1.33;
   color: #ffffff;
   margin-bottom: 18px;
 }
 
 .white-text {
   color: #ffffffb3;
+  max-width: 308px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-benefits .container {
+    padding-top: 50px;
+    padding-bottom: 85px;
+    margin-bottom: 40px;
+  }
+
+  .benefits-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .benefits-item {
+    flex-basis: calc((100% - 32px * 1) / 2);
+  }
+}
+
+@media screen and (min-width: 1168px) {
+  .main-benefits .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 34px;
+    padding-right: 34px;
+    margin-bottom: 50px;
+  }
+
+  .benefits-menu {
+    flex-wrap: nowrap;
+    gap: 88px;
+  }
+
+  .benefits-item {
+    flex-basis: calc((100% - 88px * 2) / 3);
+    position: relative;
+  }
+
+  .border::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -18px;
+    width: 1px;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(50%);
+  }
 }
 /* ========= end Benefits section ========= */
 
 /* ========== Ingredients Section ========= */
+
 .main-ingredients .container {
-  padding-top: 28px;
-  padding-bottom: 28px;
-  margin-bottom: 72px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .main-title-two {
   font-weight: 600;
-  font-size: 24px;
-  line-height: 1.17;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   text-align: center;
   color: #111111;
-  max-width: 411px;
+  max-width: 283px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .orange-span {
@@ -574,20 +612,19 @@ img {
 
 .black-text {
   text-align: center;
-  max-width: 486px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
+  max-width: 100%px;
+  margin-bottom: 32px;
 }
 
 .ingredients-menu {
   display: flex;
-  gap: 19px;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .ingredients-item {
-  flex-basis: calc((100% - 3 * 19px) / 4);
-  padding: 28px 32px;
+  flex-basis: 100%;
+  padding: 28px 28px;
   border-radius: 15px;
   border: 1px solid transparent;
   background-color: #ffffff;
@@ -595,12 +632,10 @@ img {
   position: relative;
 }
 
-/* .ingredients-card {
-  padding: 28px 32px;
-} */
-
-.ingredients-images {
-  margin-bottom: 36px;
+.ingredients-image {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
 }
 
 .ingredients-text {
@@ -610,6 +645,7 @@ img {
 
 .main-ingredients .main-title-three {
   color: #111111;
+  letter-spacing: -0.03em;
   margin-bottom: 8px;
   text-transform: uppercase;
 }
@@ -617,7 +653,7 @@ img {
 .overlay {
   background-color: #ffffff;
   border-radius: 15px;
-  padding: 20px;
+  padding: 28px;
   position: absolute;
   top: 0;
   left: 0;
@@ -683,42 +719,94 @@ img {
 .ingredients-item:hover .overlay {
   transform: translateY(0);
 }
+
+@media screen and (min-width: 768px) {
+  .main-ingredients .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .main-title-two {
+    font-size: 24px;
+    line-height: 1.17;
+    max-width: 411px;
+  }
+
+  .black-text {
+    max-width: 486px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ingredients-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .ingredients-item {
+    flex-basis: calc((100% - 1 * 32px) / 2);
+  }
+}
+
+@media screen and (min-width: 1168px) {
+  .main-ingredients .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .ingredients-menu {
+    flex-wrap: nowrap;
+    gap: 19px;
+  }
+
+  .ingredients-item {
+    flex-basis: calc((100% - 3 * 19px) / 4);
+  }
+
+  .ingredients-image {
+    margin-bottom: 36px;
+  }
+
+  .overlay {
+    padding: 20px;
+  }
+}
 /* ======= end Ingredients Section ======== */
 
 /* ======== How it’s made Section ========= */
 .main-him .container {
-  padding-top: 28px;
-  margin-bottom: 72px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .main-him .main-title-two {
-  margin-bottom: 50px;
+  margin-bottom: 32px;
 }
 
 .him-image-block {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
 .him-block {
-  padding: 32px;
-  max-width: 516px;
+  padding: 20px 14px;
+  width: 100%;
 }
 
 .main-him .main-title-three {
-  max-width: 355px;
   color: #111111;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .him-item {
-  max-width: 425px;
   position: relative;
   padding-left: 16px;
 }
 
 .him-item:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .him-text::before {
@@ -731,6 +819,54 @@ img {
   position: absolute;
   top: 5px;
   left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .main-him .container {
+    padding: 40px 61px;
+  }
+
+  .main-him .main-title-two {
+    margin-bottom: 50px;
+  }
+
+  .him-block {
+    padding: 32px;
+  }
+
+  .main-him .main-title-three {
+    margin-bottom: 28px;
+  }
+}
+
+@media screen and (min-width: 1168px) {
+  .main-him .container {
+    padding: 50px 16px;
+  }
+
+  .main-him .main-title-two {
+    margin-bottom: 50px;
+  }
+
+  .him-image-block {
+    flex-direction: row;
+  }
+
+  .him-block {
+    max-width: 516px;
+  }
+
+  .main-him .main-title-three {
+    max-width: 355px;
+  }
+
+  .him-item {
+    max-width: 436px;
+  }
+
+  .him-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
 /* ====== end How it’s made Section ======= */
 

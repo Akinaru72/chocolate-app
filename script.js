@@ -21,3 +21,11 @@ openHeaderBtn.addEventListener("click", () => {
 closeHeaderBtn.addEventListener("click", () => {
   headerMobileWindow.classList.remove("is-open");
 });
+
+const modalLinks = document.querySelectorAll("#headerWindow a");
+
+modalLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    headerMobileWindow.classList.remove("is-open");
+  });
+});
